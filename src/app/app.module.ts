@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { TitulosCarouselComponent } from './titulos-carousel/titulos-carousel.component';
 import { ImagenesCarouselComponent } from './imagenes-carousel/imagenes-carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BotonComponent } from './boton/boton.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitulosCarouselComponent,
-    ImagenesCarouselComponent
+    ImagenesCarouselComponent,
+    BotonComponent
   ],
   imports: [
     BrowserModule,

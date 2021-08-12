@@ -1,1 +1,16 @@
-<p>titulos-carousel works!</p>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
+    <li [ngbNavItem]="1" [destroyOnHide]="true">
+        <a ngbNavLink>Fútbol</a>
+        <ng-template ngbNavContent>
+
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+        <a ngbNavLink>Baloncesto</a>
+        <ng-template ngbNavContent>
+
+        </ng-template>
+    </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

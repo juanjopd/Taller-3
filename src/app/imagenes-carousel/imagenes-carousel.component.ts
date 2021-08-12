@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-imagenes-carousel',
@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImagenesCarouselComponent {
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  @Output() images  = ["https://images.ole.com.ar/2021/08/06/x3hDY8_kE_720x0__1.jpg", "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/02/15753211669003.jpg"];
 
 }
