@@ -1,16 +1,29 @@
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
-    <li [ngbNavItem]="1" [destroyOnHide]="true">
-        <a ngbNavLink>Fútbol</a>
-        <ng-template ngbNavContent>
+<!--<div>
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1" *ngFor="let categoria of categoriasFutbol;let i = index">
+            <a ngbNavLink>{{categoria.nombre}}</a>
+            <ng-template ngbNavContent>
+                <app-imagenes-carousel [imagenes]="categoria.imagenes"></app-imagenes-carousel>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2" *ngFor="let categoria of categoriasBasket; i of index">
+            <a ngbNavLink>{{categoria.nombre}}</a>
+            <ng-template ngbNavContent>
+                <app-imagenes-carousel [imagenes]="categoria.imagenes"></app-imagenes-carousel>
+            </ng-template>
+        </li>
+    </ul>
+</div>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>-->
 
-        </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-        <a ngbNavLink>Baloncesto</a>
-        <ng-template ngbNavContent>
-
-        </ng-template>
-    </li>
+<div *ngFor="let categoria of categorias;let i=index">
+    <app-boton (onclick)="click(i)" [mensaje]="categoria.nombre"></app-boton>
+</div>
+<hr>
+<ul>
+    <div class="row">
+        <div class="col-md-12">
+            <app-imagenes-carousel [imagenes]="categorias[index].imagenes"></app-imagenes-carousel>
+        </div>
+    </div>
 </ul>
-
-<div [ngbNavOutlet]="nav" class="mt-2"></div>

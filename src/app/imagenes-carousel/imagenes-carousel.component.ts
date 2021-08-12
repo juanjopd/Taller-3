@@ -1,12 +1,38 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { Categoria } from '../categoria';
 
 @Component({
   selector: 'app-imagenes-carousel',
   templateUrl: './imagenes-carousel.component.html',
   styleUrls: ['./imagenes-carousel.component.css']
 })
-export class ImagenesCarouselComponent {
+export class ImagenesCarouselComponent  implements OnInit{
+  
+  @Input() imagenes: string[] = []
+  private index = 0
+  public url = ""
 
-  @Output() images  = ["https://images.ole.com.ar/2021/08/06/x3hDY8_kE_720x0__1.jpg", "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/02/15753211669003.jpg"];
+  constructor(){}
+
+  ngOnInit(): void{
+
+  }
+  
+  anterior(){
+    if (this.index == 0) {
+      this.index = this.imagenes.length
+    }
+    this.index--
+    this.url = this.imagenes[this.index]
+  }
+
+  siguiente(){
+    if (this.index == this.imagenes.length-1) {
+      this.index = -1
+    }
+    this.index++
+    this.url = this.imagenes[this.index]
+  }
+
 
 }

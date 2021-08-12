@@ -1,20 +1,13 @@
-<ngb-carousel *ngIf="images" class="carrusel">
-    <ng-template ngbSlide>
-        <div>
-            <img [src]="images[0]" alt="Random first slide" class="img">
-        </div>
-        <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>El mejor jugador de la historia...</p>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <div>
-            <img [src]="images[1]" alt="Random second slide" class="img">
-        </div>
-        <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Asi le dé rabia a Payan.</p>
-        </div>
-    </ng-template>
-</ngb-carousel>
+<div class="row">
+    <div class="col-md-12">
+        <img [src]="url" [alt]="url">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <app-boton (onClick)="anterior()" color="btn-secondary" mensaje="Anterior"></app-boton>
+    </div>
+    <div class="col-md-6">
+        <app-boton (onClick)="siguiente()" color="btn-succes" mensaje="Siguiente"></app-boton>
+    </div>
+</div>
