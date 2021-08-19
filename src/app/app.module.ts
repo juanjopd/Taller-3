@@ -8,6 +8,8 @@ import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { BotonComponent } from './boton/boton.component';
 import { ServicesComponent } from './services/services.component';
 import { ImagenesService } from './services/imagenes.service';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { ImagenesService } from './services/imagenes.service';
     TitulosCarouselComponent,
     ImagenesCarouselComponent,
     BotonComponent,
-    ServicesComponent
+    ServicesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [ImagenesService],
   bootstrap: [AppComponent]
