@@ -1,21 +1,5 @@
-<!--<div>
-    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-        <li [ngbNavItem]="1" *ngFor="let categoria of categoriasFutbol;let i = index">
-            <a ngbNavLink>{{categoria.nombre}}</a>
-            <ng-template ngbNavContent>
-                <app-imagenes-carousel [imagenes]="categoria.imagenes"></app-imagenes-carousel>
-            </ng-template>
-        </li>
-        <li [ngbNavItem]="2" *ngFor="let categoria of categoriasBasket; i of index">
-            <a ngbNavLink>{{categoria.nombre}}</a>
-            <ng-template ngbNavContent>
-                <app-imagenes-carousel [imagenes]="categoria.imagenes"></app-imagenes-carousel>
-            </ng-template>
-        </li>
-    </ul>
-</div>
-<div [ngbNavOutlet]="nav" class="mt-2"></div>-->
-<div *ngIf="">
+<br>
+<div class="container">
 <div *ngFor="let categoria of categorias;let i=index">
     <app-boton (onclick)="click(i)" [mensaje]="categoria.nombre"></app-boton>
 </div>
