@@ -15,7 +15,7 @@
     </ul>
 </div>
 <div [ngbNavOutlet]="nav" class="mt-2"></div>-->
-
+<div *ngIf="">
 <div *ngFor="let categoria of categorias;let i=index">
     <app-boton (onclick)="click(i)" [mensaje]="categoria.nombre"></app-boton>
 </div>
@@ -27,3 +27,4 @@
         </div>
     </div>
 </ul>
+</div>
